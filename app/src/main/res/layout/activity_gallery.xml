@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Gallery">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/productsTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ourproducts"
+        android:stretchColumns="*"> <!-- stretch the second column of the layout-->
+
+        <!-- first row of the table layout-->
+        <TableRow
+
+            android:id="@+id/row1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/cat1" />
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/cat2" />
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/cat3" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/prod1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$18.00"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="14dp" />
+            <TextView
+                android:id="@+id/prod2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$12.50"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="14dp" />
+            <TextView
+                android:id="@+id/prod3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$21.90"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="14dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/addProd1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+            <ImageView
+                android:id="@+id/addProd2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+            <ImageView
+                android:id="@+id/addProd3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+        </TableRow>
+
+        <!-- second row of the table layout-->
+        <TableRow
+
+            android:id="@+id/row4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/dog1" />
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/dog2" />
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/dog3" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/prod4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$27.90"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="14dp" />
+            <TextView
+                android:id="@+id/prod5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$11.50"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="14dp" />
+            <TextView
+                android:id="@+id/prod6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$34.00"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="14dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/addProd4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+            <ImageView
+                android:id="@+id/addProd5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+            <ImageView
+                android:id="@+id/addProd6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+        </TableRow>
+
+        <!-- third row of the table layout-->
+        <TableRow
+
+            android:id="@+id/row7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/parrot1" />
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/parrot2" />
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/parrot3" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/prod7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$17.30"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="14dp" />
+            <TextView
+                android:id="@+id/prod8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$21.70"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="14dp" />
+            <TextView
+                android:id="@+id/prod9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$44.90"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="14dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/addProd7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+            <ImageView
+                android:id="@+id/addProd8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+            <ImageView
+                android:id="@+id/addProd9"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/ourproducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Our Products"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary_variant"
+        android:gravity="right">
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cartAmount"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="$0.00"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="100dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hello"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"/>
+
+
+        <ImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_baseline_person_outline_24"
+            android:onClick="showPopup"/>
+    </LinearLayout>
+
+</RelativeLayout>
