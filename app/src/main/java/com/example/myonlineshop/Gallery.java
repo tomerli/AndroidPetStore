@@ -55,7 +55,7 @@ public class Gallery extends AppCompatActivity {
 
 
         TextView cartAmount = (TextView) findViewById(R.id.cartAmount);
-        double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+        //double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
         //Toast.makeText(Gallery.this, "cartAmountDouble: " + cartAmountDouble, Toast.LENGTH_SHORT).show();
 
         /******* Prod1 *******/
@@ -65,8 +65,10 @@ public class Gallery extends AppCompatActivity {
         addProd1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(Gallery.this, "Price: " + prod1.getText(), Toast.LENGTH_SHORT).show();
-                cartAmount.setText(prod1.getText());
+                double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+                cartAmountDouble += prod1Double;
+                cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                //cartAmount.setText(prod1.getText());
             }
         });
 
@@ -77,7 +79,10 @@ public class Gallery extends AppCompatActivity {
         addProd2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartAmount.setText(prod2.getText());
+                double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+                cartAmountDouble += prod2Double;
+                cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                //cartAmount.setText(prod2.getText());
             }
         });
 
@@ -88,7 +93,10 @@ public class Gallery extends AppCompatActivity {
         addProd3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartAmount.setText(prod3.getText());
+                double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+                cartAmountDouble += prod3Double;
+                cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                //cartAmount.setText(prod3.getText());
             }
         });
 
@@ -99,7 +107,10 @@ public class Gallery extends AppCompatActivity {
         addProd4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartAmount.setText(prod4.getText());
+                double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+                cartAmountDouble += prod4Double;
+                cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                //cartAmount.setText(prod4.getText());
             }
         });
 
@@ -110,7 +121,10 @@ public class Gallery extends AppCompatActivity {
         addProd5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartAmount.setText(prod5.getText());
+                double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+                cartAmountDouble += prod5Double;
+                cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                //cartAmount.setText(prod5.getText());
             }
         });
 
@@ -121,7 +135,10 @@ public class Gallery extends AppCompatActivity {
         addProd6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartAmount.setText(prod6.getText());
+                double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+                cartAmountDouble += prod6Double;
+                cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                //cartAmount.setText(prod6.getText());
             }
         });
 
@@ -132,7 +149,10 @@ public class Gallery extends AppCompatActivity {
         addProd7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartAmount.setText(prod7.getText());
+                double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+                cartAmountDouble += prod7Double;
+                cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                //cartAmount.setText(prod7.getText());
             }
         });
 
@@ -143,7 +163,10 @@ public class Gallery extends AppCompatActivity {
         addProd8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartAmount.setText(prod8.getText());
+                double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+                cartAmountDouble += prod8Double;
+                cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                //cartAmount.setText(prod8.getText());
             }
         });
 
@@ -154,7 +177,10 @@ public class Gallery extends AppCompatActivity {
         addProd9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartAmount.setText(prod9.getText());
+                double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
+                cartAmountDouble += prod9Double;
+                cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                //cartAmount.setText(prod9.getText());
             }
         });
 
