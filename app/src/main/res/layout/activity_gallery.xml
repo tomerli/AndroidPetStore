@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Gallery">
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <TableLayout
         android:id="@+id/productsTable"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,7 +53,7 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/design_default_color_primary_variant"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/prod2"
                 android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
                 android:text="$12.50"
                 android:textStyle="bold"
                 android:textColor="@color/design_default_color_primary_variant"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/prod3"
                 android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
                 android:text="$21.90"
                 android:textStyle="bold"
                 android:textColor="@color/design_default_color_primary_variant"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow
@@ -140,7 +140,7 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/design_default_color_primary_variant"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/prod5"
                 android:layout_width="wrap_content"
@@ -149,7 +149,7 @@
                 android:text="$11.50"
                 android:textStyle="bold"
                 android:textColor="@color/design_default_color_primary_variant"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/prod6"
                 android:layout_width="wrap_content"
@@ -158,7 +158,7 @@
                 android:text="$34.00"
                 android:textStyle="bold"
                 android:textColor="@color/design_default_color_primary_variant"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow
@@ -227,7 +227,7 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/design_default_color_primary_variant"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/prod8"
                 android:layout_width="wrap_content"
@@ -236,7 +236,7 @@
                 android:text="$21.70"
                 android:textStyle="bold"
                 android:textColor="@color/design_default_color_primary_variant"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/prod9"
                 android:layout_width="wrap_content"
@@ -245,7 +245,7 @@
                 android:text="$44.90"
                 android:textStyle="bold"
                 android:textColor="@color/design_default_color_primary_variant"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow
@@ -273,8 +273,35 @@
                 app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
         </TableRow>
 
+        <!--<TableRow
+            android:id="@+id/row10"
+            android:layout_width="match_parent"
+            android:layout_height="63dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/checkoutbtn2"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_span="3"
+                app:cornerRadius="10pt"
+                android:backgroundTint="@color/design_default_color_primary_variant"
+                android:text="Checkout" />
+        </TableRow>-->
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/checkoutbtn"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        app:cornerRadius="10pt"
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:text="Checkout"
+        android:layout_width="200dp"
+        android:layout_alignBottom="@id/productsTable"
+/>
 
     <TextView
         android:id="@+id/ourproducts"
@@ -328,8 +355,8 @@
 
         <ImageView
             android:id="@+id/userAvatar"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             app:srcCompat="@drawable/ic_baseline_person_outline_24"
             android:onClick="showPopup"/>
     </LinearLayout>

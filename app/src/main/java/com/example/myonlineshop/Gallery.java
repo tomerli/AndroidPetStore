@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -53,10 +54,22 @@ public class Gallery extends AppCompatActivity {
             }
         });
 
-
         TextView cartAmount = (TextView) findViewById(R.id.cartAmount);
         //double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
         //Toast.makeText(Gallery.this, "cartAmountDouble: " + cartAmountDouble, Toast.LENGTH_SHORT).show();
+
+        Button checkoutbtn = (Button) findViewById(R.id.checkoutbtn);
+        Bundle myCart = new Bundle();
+        checkoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Gallery.this, Cart.class);
+                myCart.putString("currUser", currUser);
+                myCart.putString("cartAmount", cartAmount.getText().toString());
+                intent.putExtras(myCart);
+                startActivity(intent);
+            }
+        });
 
         /******* Prod1 *******/
         ImageView addProd1 = (ImageView) findViewById(R.id.addProd1);
@@ -68,6 +81,8 @@ public class Gallery extends AppCompatActivity {
                 double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
                 cartAmountDouble += prod1Double;
                 cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                myCart.putDouble("prod1Price", prod1Double);
+                myCart.putString("prod1Desc", "Cats yammi 1");
                 //cartAmount.setText(prod1.getText());
             }
         });
@@ -82,6 +97,8 @@ public class Gallery extends AppCompatActivity {
                 double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
                 cartAmountDouble += prod2Double;
                 cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                myCart.putDouble("prod2Price", prod2Double);
+                myCart.putString("prod2Desc", "Cats yammi 2");
                 //cartAmount.setText(prod2.getText());
             }
         });
@@ -96,6 +113,8 @@ public class Gallery extends AppCompatActivity {
                 double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
                 cartAmountDouble += prod3Double;
                 cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                myCart.putDouble("prod3Price", prod3Double);
+                myCart.putString("prod3Desc", "Cats yammi 3");
                 //cartAmount.setText(prod3.getText());
             }
         });
@@ -110,6 +129,8 @@ public class Gallery extends AppCompatActivity {
                 double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
                 cartAmountDouble += prod4Double;
                 cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                myCart.putDouble("prod4Price", prod4Double);
+                myCart.putString("prod4Desc", "Cats yammi 4");
                 //cartAmount.setText(prod4.getText());
             }
         });
@@ -124,6 +145,8 @@ public class Gallery extends AppCompatActivity {
                 double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
                 cartAmountDouble += prod5Double;
                 cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                myCart.putDouble("prod5Price", prod5Double);
+                myCart.putString("prod5Desc", "Cats yammi 5");
                 //cartAmount.setText(prod5.getText());
             }
         });
@@ -138,6 +161,8 @@ public class Gallery extends AppCompatActivity {
                 double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
                 cartAmountDouble += prod6Double;
                 cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                myCart.putDouble("prod6Price", prod6Double);
+                myCart.putString("prod6Desc", "Cats yammi 6");
                 //cartAmount.setText(prod6.getText());
             }
         });
@@ -152,6 +177,8 @@ public class Gallery extends AppCompatActivity {
                 double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
                 cartAmountDouble += prod7Double;
                 cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                myCart.putDouble("prod7Price", prod7Double);
+                myCart.putString("prod7Desc", "Cats yammi 7");
                 //cartAmount.setText(prod7.getText());
             }
         });
@@ -166,6 +193,8 @@ public class Gallery extends AppCompatActivity {
                 double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
                 cartAmountDouble += prod8Double;
                 cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                myCart.putDouble("prod8Price", prod8Double);
+                myCart.putString("prod8Desc", "Cats yammi 8");
                 //cartAmount.setText(prod8.getText());
             }
         });
@@ -180,6 +209,8 @@ public class Gallery extends AppCompatActivity {
                 double cartAmountDouble = Double.parseDouble(cartAmount.getText().toString().substring(1));
                 cartAmountDouble += prod9Double;
                 cartAmount.setText("$" + String.format("%.2f", cartAmountDouble));
+                myCart.putDouble("prod9Price", prod9Double);
+                myCart.putString("prod9Desc", "Cats yammi 9");
                 //cartAmount.setText(prod9.getText());
             }
         });

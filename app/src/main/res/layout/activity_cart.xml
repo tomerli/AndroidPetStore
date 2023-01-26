@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tableCart"
+        android:layout_below="@id/myCart"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:stretchColumns="*">
+    </TableLayout>
+
+    <Button
+        android:id="@+id/checkoutbtn"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        app:cornerRadius="10pt"
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:text="Proceed to payment"
+        android:layout_width="300dp"
+        android:layout_alignBottom="@id/tableCart"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:id="@+id/topPanel"
+        android:background="@color/design_default_color_primary_variant"
+        android:gravity="right">
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cartAmount"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="$0.00"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="100dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hello"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"/>
+
+
+        <ImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@drawable/ic_baseline_person_outline_24"
+            android:onClick="showPopup"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/myCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="Cart"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <!--<TextView
+        android:id="@+id/cartDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:layout_below="@id/myCart" />
+
+    <TextView
+        android:id="@+id/cartSubTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:layout_below="@id/cartDetails" />
+
+    <TextView
+        android:id="@+id/vat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:layout_below="@id/cartSubTotal" />
+
+    <TextView
+        android:id="@+id/cartTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:layout_below="@id/vat" />-->
+
+
+</RelativeLayout>
