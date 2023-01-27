@@ -52,7 +52,7 @@
             android:textStyle="bold"
             android:text="$0.00"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="100dp"/>
+            android:layout_marginRight="80dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
             android:textSize="16dp"
             android:textStyle="bold"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="50dp"/>
+            android:layout_marginRight="40dp"/>
 
 
         <ImageView
@@ -86,47 +86,5 @@
         android:textColor="@color/design_default_color_primary_variant"
         android:textSize="35dp"
         android:textStyle="bold" />
-
-    <!--<TextView
-        android:id="@+id/cartDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="@color/black"
-        android:textSize="10pt"
-        android:layout_below="@id/myCart" />
-
-    <TextView
-        android:id="@+id/cartSubTotal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="@color/black"
-        android:textSize="10pt"
-        android:layout_below="@id/cartDetails" />
-
-    <TextView
-        android:id="@+id/vat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="@color/black"
-        android:textSize="10pt"
-        android:layout_below="@id/cartSubTotal" />
-
-    <TextView
-        android:id="@+id/cartTotal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="@color/design_default_color_primary_variant"
-        android:textSize="10pt"
-        android:textStyle="bold"
-        android:layout_below="@id/vat" />-->
-
 
 </RelativeLayout>
