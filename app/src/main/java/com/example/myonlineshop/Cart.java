@@ -1,6 +1,7 @@
 package com.example.myonlineshop;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -38,12 +39,16 @@ public class Cart extends AppCompatActivity {
         tableCart.setStretchAllColumns(true);
 
         TableRow tr = new TableRow(this);
+        tr.setBackgroundColor(ContextCompat.getColor(Cart.this, R.color.purple_700));
+        tr.setPadding(10, 10, 10, 10);
         TextView tv = new TextView(this);
         tv.setText("Item");
-        tv.setTextSize(28);
+        tv.setTextColor(Color.WHITE);
+        tv.setTextSize(26);
         TextView tv2 = new TextView(this);
         tv2.setText("Price");
-        tv2.setTextSize(28);
+        tv2.setTextColor(Color.WHITE);
+        tv2.setTextSize(26);
         tr.addView(tv);
         tr.addView(tv2);
         tableCart.addView(tr);
@@ -51,6 +56,8 @@ public class Cart extends AppCompatActivity {
         for(int i=1; i<10; i++){
             if(bundle.getString("prod" + i + "Desc") != null) {
                 TableRow tableRow = new TableRow(this);
+                tableRow.setBackgroundColor(ContextCompat.getColor(Cart.this, R.color.white));
+                tableRow.setPadding(10, 10, 10, 10);
                 TextView textViewDesc = new TextView(this);
                 textViewDesc.setText(bundle.getString("prod" + i + "Desc"));
                 textViewDesc.setTextSize(22);
@@ -67,52 +74,47 @@ public class Cart extends AppCompatActivity {
         double vat = inputCartAmountDouble * 0.2;
         double finalTotal = inputCartAmountDouble + vat;
 
-        TableRow tr2 = new TableRow(this);
-        TextView tv3 = new TextView(this);
-        tv3.setText("--------------------");
-        tv3.setTextSize(26);
-        TextView tv4 = new TextView(this);
-        tv4.setText("--------------------");
-        tv4.setTextSize(26);
-        tr2.addView(tv3);
-        tr2.addView(tv4);
-        tableCart.addView(tr2);
-
         TableRow tableRowSubTotal = new TableRow(this);
+        tableRowSubTotal.setBackgroundColor(ContextCompat.getColor(Cart.this, R.color.teal_200));
+        tableRowSubTotal.setPadding(10, 10, 10, 10);
         TextView textViewSubTotal = new TextView(this);
         textViewSubTotal.setText(inputCartAmount);
         textViewSubTotal.setTextSize(26);
-        textViewSubTotal.setTextColor(Color.BLUE);
+        textViewSubTotal.setTextColor(Color.WHITE);
         TextView textViewSubTotalText = new TextView(this);
         textViewSubTotalText.setText("Subtotal");
         textViewSubTotalText.setTextSize(26);
-        textViewSubTotalText.setTextColor(Color.BLUE);
+        textViewSubTotalText.setTextColor(Color.WHITE);
         tableRowSubTotal.addView(textViewSubTotalText);
         tableRowSubTotal.addView(textViewSubTotal);
         tableCart.addView(tableRowSubTotal);
 
         TableRow tableRowVat = new TableRow(this);
+        tableRowVat.setBackgroundColor(ContextCompat.getColor(Cart.this, R.color.teal_200));
+        tableRowVat.setPadding(10, 10, 10, 10);
         TextView textViewVat = new TextView(this);
         textViewVat.setText("$" + String.format("%.2f", vat));
         textViewVat.setTextSize(26);
-        textViewVat.setTextColor(Color.BLUE);
+        textViewVat.setTextColor(Color.WHITE);
         TextView textViewVatText = new TextView(this);
         textViewVatText.setText("VAT");
         textViewVatText.setTextSize(26);
-        textViewVatText.setTextColor(Color.BLUE);
+        textViewVatText.setTextColor(Color.WHITE);
         tableRowVat.addView(textViewVatText);
         tableRowVat.addView(textViewVat);
         tableCart.addView(tableRowVat);
 
         TableRow tableRowTotal = new TableRow(this);
+        tableRowTotal.setBackgroundColor(ContextCompat.getColor(Cart.this, R.color.teal_700));
+        tableRowTotal.setPadding(10, 10, 10, 10);
         TextView textViewTotal = new TextView(this);
         textViewTotal.setText("$" + String.format("%.2f", finalTotal));
-        textViewTotal.setTextSize(30);
-        textViewTotal.setTextColor(Color.BLUE);
+        textViewTotal.setTextSize(28);
+        textViewTotal.setTextColor(Color.WHITE);
         TextView textViewTotalText = new TextView(this);
         textViewTotalText.setText("Total");
-        textViewTotalText.setTextSize(30);
-        textViewTotalText.setTextColor(Color.BLUE);
+        textViewTotalText.setTextSize(28);
+        textViewTotalText.setTextColor(Color.WHITE);
         tableRowTotal.addView(textViewTotalText);
         tableRowTotal.addView(textViewTotal);
         tableCart.addView(tableRowTotal);
