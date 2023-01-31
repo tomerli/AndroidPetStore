@@ -11,6 +11,18 @@ import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -26,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 //if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin"))
                 //{
                     //Toast.makeText(MainActivity.this, "SUCCESS", Toast.LENGTH_SHORT).show();

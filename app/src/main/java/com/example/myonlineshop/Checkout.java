@@ -14,6 +14,19 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Properties;
+import java.util.Random;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
 
 public class Checkout extends AppCompatActivity {
 
@@ -38,6 +51,7 @@ public class Checkout extends AppCompatActivity {
         TextView expiration = (TextView) findViewById(R.id.expiration);
         TextView cvv = (TextView) findViewById(R.id.cvv);
         TextView phone = (TextView) findViewById(R.id.phone);
+        TextView email = (TextView) findViewById(R.id.email);
 
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +67,61 @@ public class Checkout extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             dialogInterface.dismiss();
-                            Toast.makeText(Checkout.this, "Thank you for purchase", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Checkout.this, "Thank you for purchase, confirmation code has been sent to your mailbox", Toast.LENGTH_LONG).show();
+                            /********** EMAIL *******/
+                            try {
+
+                                String stringSenderEmail = "online.petshop13@gmail.com";
+                                String stringReceiverEmail = email.getText().toString();
+                                String stringPasswordSenderEmail = "nmul drgd fogc fumr";
+
+                                String stringHost = "smtp.gmail.com";
+
+                                Properties properties = System.getProperties();
+
+                                properties.put("mail.smtp.host", stringHost);
+                                properties.put("mail.smtp.port", "465");
+                                properties.put("mail.smtp.ssl.enable", "true");
+                                properties.put("mail.smtp.auth", "true");
+
+                                javax.mail.Session session = Session.getInstance(properties, new Authenticator() {
+                                    @Override
+                                    protected PasswordAuthentication getPasswordAuthentication() {
+                                        return new PasswordAuthentication(stringSenderEmail, stringPasswordSenderEmail);
+                                    }
+                                });
+
+                                MimeMessage mimeMessage = new MimeMessage(session);
+                                mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(stringReceiverEmail));
+                                mimeMessage.setSubject("Subject: Your purchase on Online Pet Shop - confirmation code");
+                                mimeMessage.setText("Please use this code to confirm: " + Math.floor(100000 + Math.random() * 900000));
+
+                                Thread thread = new Thread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        try {
+                                            Transport.send(mimeMessage);
+                                        } catch (MessagingException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                });
+                                thread.start();
+
+                            } catch (AddressException e) {
+                                e.printStackTrace();
+                            } catch (MessagingException e) {
+                                e.printStackTrace();
+                            }
+
+                            Intent intent = new Intent(Checkout.this, Confirmation.class);
+
+                            Bundle bundle = new Bundle();
+                            bundle.putString("currUser", currUser);
+                            intent.putExtras(bundle);
+
+                            startActivity(intent);
+                            /****** EMAIL ********/
                         }
                     });
                     alertBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
