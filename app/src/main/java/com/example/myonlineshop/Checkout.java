@@ -73,7 +73,7 @@ public class Checkout extends AppCompatActivity {
 
                                 String stringSenderEmail = "online.petshop13@gmail.com";
                                 String stringReceiverEmail = email.getText().toString();
-                                String stringPasswordSenderEmail = "nmul drgd fogc fumr";
+                                String stringPasswordSenderEmail = "hukm dpcl kylr tvmg";
 
                                 String stringHost = "smtp.gmail.com";
 
