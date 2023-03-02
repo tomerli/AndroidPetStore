@@ -113,15 +113,13 @@ public class Checkout extends AppCompatActivity {
                             } catch (MessagingException e) {
                                 e.printStackTrace();
                             }
+                            /****** EMAIL ********/
 
                             Intent intent = new Intent(Checkout.this, Confirmation.class);
-
                             Bundle bundle = new Bundle();
                             bundle.putString("currUser", currUser);
                             intent.putExtras(bundle);
-
                             startActivity(intent);
-                            /****** EMAIL ********/
                         }
                     });
                     alertBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
