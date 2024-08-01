@@ -68,7 +68,7 @@ public class Checkout extends AppCompatActivity {
                         public void onClick(DialogInterface dialogInterface, int i) {
                             dialogInterface.dismiss();
                             Toast.makeText(Checkout.this, "Thank you for purchase, confirmation code has been sent to your mailbox", Toast.LENGTH_LONG).show();
-                            /********** EMAIL *******/
+                            /********** EMAIL *******
                             try {
 
                                 String stringSenderEmail = "online.petshop13@gmail.com";
@@ -113,7 +113,7 @@ public class Checkout extends AppCompatActivity {
                             } catch (MessagingException e) {
                                 e.printStackTrace();
                             }
-                            /****** EMAIL ********/
+                            ****** EMAIL ********/
 
                             Intent intent = new Intent(Checkout.this, Confirmation.class);
                             Bundle bundle = new Bundle();
